@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Responsive Admin Dashboard</title>
+  <style>
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    /* Container */
+    .container {
+        display: flex;
+    }
+
+    /* Navigation */
+    .navigation {
+        width: 250px;
+        background: #0a66c2;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .navigation ul {
+        list-style: none;
+    }
+
+    .navigation ul li {
+        margin: 20px 0;
+    }
+
+    .navigation ul li a {
+        text-decoration: none;
+        color: #ecf0f1;
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation ul li a .icon {
+        margin-right: 10px;
+    }
+
+    /* Main Content */
+    .main {
+        flex: 1;
+        padding: 20px;
+    }
+
+    /* Top Bar */
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #ecf0f1;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* Settings Section */
+    .settings-section {
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    .cardHeader {
+        margin-bottom: 20px;
+    }
+
+    .cardHeader h2 {
+        font-size: 24px;
+        color: #2c3e50;
+    }
+
+    /* Form Styles */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .btn {
+        background-color: #5cb85c;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .btn:hover {
+        background-color: #4cae4c;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .navigation {
+            width: 100%;
+            height: auto;
+        }
+
+        .main {
+            padding: 10px;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="index.html"> 
+            <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
+            <span class="title">Fitra Akbar</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html"> 
+            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="title">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="customers.html"> 
+            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+            <span class="title">Customers</span>
+          </a>
+        </li>
+        <li>
+          <a href="message.html">
+            <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+            <span class="title">Message</span>
+          </a>
+        </li>
+        <li>
+          <a href="help.html"> 
+            <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+            <span class="title">Help</span>
+        <li>
+          <a href="settings.html"> 
+            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+            <span class="title">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+            <span class="title">Password</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+            <span class="title">Sign out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Top Bar -->
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="Search here">
+            <ion-icon name="search-outline"></ion-icon>
+          </label>
+        </div>
+        <div class="user">
+            <video src="https://pin.it/5ASZDmIgG"></video>
+        </div>
+      </div>
+
+      <!-- Settings Section -->
+      <div class="settings-section">
+        <div class="cardHeader">
+          <h2>Settings</h2>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="Fitra Akbar" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="fitra@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+          </div>
+          <button type="submit" class="btn">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0

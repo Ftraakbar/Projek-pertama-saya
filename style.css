@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1b18c4; 
+    --secondary-color: #fff;
+    --background-color: #ffffff; 
+    --text-color1: #222;
+    --text-color2: #999;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative; 
+    width: 100%;
+}
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background: var(--primary-color);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation.active {
+    width: 80px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+    background-color: var(--background-color);
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 35px;
+    pointer-events: none;
+}
+
+.navigation ul li a {
+    display: flex; 
+    width: 100%;
+    text-decoration: none;
+    color: var(--background-color);
+    padding: 10px;
+    align-items: center;
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+    color: var(--primary-color);
+}
+
+.navigation ul li a .icon {
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+    font-size: 1.75rem;
+}
+
+.navigation ul li a .title {
+    padding-left: 10px; 
+    line-height: 60px; 
+    white-space: nowrap; 
+}
+
+/* Pseudo-elemen Curve Outside */
+.navigation ul li a::before,
+.navigation ul li a::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50px;
+    pointer-events: none;
+}
+
+.navigation ul li a::before {
+    top: -50px;
+    right: 0;
+    box-shadow: 35px 35px 0 10px var(--background-color);
+}
+
+.navigation ul li a::after {
+    bottom: -50px;
+    right: 0;
+    box-shadow: 35px -35px 0 10px var(--background-color);
+}
+
+/* Main Content */
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--background-color);
+    transition: 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.search {
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 2px solid var(--text-color1);
+}
+
+.search label ion-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+.user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Cards Section */
+.cardBox {
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.cardBox .card {
+    background: var(--background-color);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cardBox .card .numbers {
+    font-weight: 500;
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+.cardBox .card .cardName {
+    color: var(--text-color2);
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+    font-size: 3.5em;
+    color: var(--text-color2);
+}
+
+.cardBox .card:hover {
+    background: var(--primary-color);
+    color: var(--text-color2);
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx {
+    color: var(--text-color2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navigation {
+        width: 80px;
+    }
+
+    .main {
+        width: calc(100% - 80px);
+        left: 80px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .cardBox {
+        grid-template-columns: 1fr;
+    }
+}
+
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+
+/* Styling for the 'recentOrders' details section */
+.details.recentOrders {
+    min-height: 500px;
+    background: var(--secondary-color);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    border: 2px solid var(--primary-color); 
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    cursor: pointer; 
+}
+
+/* Card Header */
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Memberikan jarak bawah */
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.8em; /* Ukuran font header */
+    margin: 0; /* Menghapus margin default */
+}
+
+/* Button styling */
+.btn {
+    padding: 8px 15px;
+    background: var(--primary-color);
+    text-decoration: none;
+    color: var(--secondary-color);
+    border-radius: 6px;
+    font-size: 1em;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: darken(var(--primary-color), 10%); /* Efek hover */
+}
+
+/* Styling for the table */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan jarak antar border */
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Memberikan garis bawah pada baris */
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    background-color: white;
+}
+
+table td span.Status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+table td span.Status.delivered {
+    background-color: #28a745;
+    color: white;
+}
+
+table td span.Status.pending {
+    background-color: #ffc107;
+    color: white;
+}
+
+table td span.Status.in-progress {
+    background-color: #007bff;
+    color: white;
+}
+
+.recentCustomers {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 30px;  /* Mengurangi padding untuk menghindari terlalu banyak ruang */
+    background: var(--background-color);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk gambar dalam lingkaran */
+.recentCustomers .imgBx {
+    position: relative;
+    width: 80px; /* Menambah ukuran gambar agar lebih jelas */
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.recentCustomers .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+}
+
+/* Styling tabel dan efek hover */
+.recentCustomers table {
+    width: 100%;
+    border-collapse: collapse;  /* Menghindari spasi ganda antara sel */
+}
+
+.recentCustomers table td {
+    padding: 15px;  /* Memberi ruang lebih pada setiap sel */
+}
+
+.recentCustomers table tr:hover {
+    background: var(--primary-color);
+    color: var(--text-color2);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Menambah transisi halus */
+}
+
+.recentCustomers h2 {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;  /* Memberi jarak antara judul dan konten */
+}
+
+.recentCustomers .customer-details {
+    display: flex;
+    align-items: center;
+}
+
+.recentCustomers .customer-details h4 {
+    margin-left: 15px;  /* Memberikan jarak antara gambar dan nama */
+    font-size: 1.2em;
+    color: var(--text-color1);
+}
+
+.recentCustomers .customer-details span {
+    font-size: 1em;
+    color: var(--text-color2);
+}
+

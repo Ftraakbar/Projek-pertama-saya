@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages - Responsive Admin Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="index.html"> <!-- Tautan ke Dashboard -->
+            <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
+            <span class="title">Fitra Akbar</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html"> <!-- Tautan ke Dashboard -->
+            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="title">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="customers.html"> <!-- Tautan ke Halaman Customers -->
+            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+            <span class="title">Customers</span>
+          </a>
+        </li>
+        <li>
+          <a href="message.html"> <!-- Tautan ke Halaman Messages -->
+            <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+            <span class="title">Message</span>
+          </a>
+        </li>
+        <li>
+          <a href="help.html">
+            <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+            <span class="title">Help</span>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html">
+            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+            <span class="title">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+            <span class="title">Password</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+            <span class="title">Sign out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Top Bar -->
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="Search here">
+            <ion-icon name="search-outline"></ion-icon>
+          </label>
+        </div>
+        <div class="user">
+          <img src="Hansohe.jpg" alt="User  Image" height="300px" width="250px">
+        </div>
+      </div>
+
+      <!-- Messages Section -->
+      <div class="messages">
+        <div class="cardHeader">
+          <h2>Messages</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Sender</th>
+              <th>Message</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>Hello, how are you?</td>
+              <td>2023-10-01</td>
+              <td><span class="status read">Read</span></td>
+            </tr>
+            <tr>
+              <td>Sanjayano</td>
+              <td>Don't forget our meeting tomorrow.</td>
+              <td>2023-10-02</td>
+              <td><span class="status unread">Unread</span></td>
+            </tr>
+            <tr>
+              <td>Dewanti Syafitrie</td>
+              <td>Can you send me the report?</td>
+              <td>2023-10-03</td>
+              <td><span class="status read">Read</span></td>
+            </tr>
+            <tr>
+              <td>Hansohe</td>
+              <td>Thank you for your help!</td>
+              <td>2023-10-04</td>
+              <td><span class="status unread">unread</span></td>

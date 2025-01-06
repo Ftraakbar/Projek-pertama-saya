@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Admin Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <a href="login.html"></a>
+  <div class="container">
+    <!-- Navigation -->
+    <div class="navigation">
+      <a href="customer.html"></a>
+      <ul>
+        <li>
+          <a href="customer.html"> <!-- Tautan ke Dashboard -->
+            <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
+            <span class="title">Fitra Akbar</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html"> <!-- Tautan ke Dashboard -->
+            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="title">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="customer.html">
+            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+            <span class="title">Customers</span>
+          </a>
+        </li>
+        <li>
+          <a href="messege.html">
+            <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+            <span class="title">Message</span>
+          </a>
+        </li>
+        <li>
+          <a href="help.html">
+            <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+            <span class="title">Help</span>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html">
+            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+            <span class="title">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+            <span class="title">Password</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+            <span class="title">Sign out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Top Bar -->
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="Search here">
+            <ion-icon name="search-outline"></ion-icon>
+          </label>
+        </div>
+        <div class="user">
+          <img src="Hansohe.jpg" alt="User  Image" height="300px" width="250px">
+        </div>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="cardBox">
+        <div class="card">
+          <div>
+            <div class="numbers">1,504</div>
+            <div class="cardName">Daily Views</div>
+          </div>
+          <div class="iconBx">
+            <ion-icon name="eye-outline"></ion-icon>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <div>
+            <div class="numbers">2,345</div>
+            <div class="cardName">Sales</div>
+          </div>
+          <div class="iconBx">
+            <ion-icon name="cart-outline"></ion-icon>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="numbers">785</div>
+            <div class="cardName">Comments</div>
+          </div>
+          <div class="iconBx">
+            <ion-icon name="chatbubble-outline"></ion-icon>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="numbers">12</div>
+            <div class="cardName">New Users</div>
+          </div>
+          <div class="iconBx">
+            <ion-icon name="people-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <!--order details list-->
+      <div class="details">
+        <div class="secentOrders">
+           <div class="cardHeader">
+            <h2>Recent Orders</h2>
+            <a href="#" class="btn">View All</a>
+           </div>
+           <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Spice</td>
+                <td>Payment</td>
+                <td>Status</td>
+              </tr>
+            </thead>
+              <tbody>
+                <tr>
+                  <td>Lemari Es</td>
+                  <td>$12.00</td>
+                  <td>Paid</td>
+                  <td><span class="Status delivered">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>Iphone XR</td>
+                  <td>$11.00</td>
+                  <td>Paid</td>
+                  <td><span class="Status delivered">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>Samsung a55</td>
+                  <td>$15.00</td>
+                  <td>Due</td>
+                  <td><span class="Status delivered">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Laptop Asus Tuf A15</td>
+                  <td>$20.00</td>
+                  <td>Paid</td>
+                  <td><span class="Status delivered">In progress</span></td>
+                </tr>
+                <tr>
+                  <td>Asus Vivobook</td>
+                  <td>$18.00</td>
+                  <td>Paid</td>
+                  <td><span class="Status delivered">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td>Airpods</td>
+                  <td>$10.00</td>
+                  <td>Paid</td>
+                  <td><span class="Status delivered">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Iphone 15 Pro Max</td>
+                  <td>$19.00</td>
+                  <td>Paid</td>
+                  <td><span class="Status delivered">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>Start Refrigerator</td>
+                  <td>$12.00</td>
+                  <td>Paid</td>
+                  <td><span class="Status delivered">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>Xiomi Redmi Note 15</td>
+                  <td>$17.00</td>
+                  <td>Paid</td>
+                  <td><span class="Status delivered">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td>Mac Book Air M13</td>
+                  <td>$19.00</td>
+                  <td>Paid</td>
+                  <td><span class="Status delivered">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>Apple watch 12 </td>
+                  <td>$13.00</td>
+                  <td>Paid</td>
+                  <td><span class="Status delivered">Return</span></td>
+                </tr>
+              </tbody>
+           </table>
+        </div>
+        <!--New Customers-->
+        <!-- New Customers -->
+        <div class="recentCustomers">
+          <div class="cardHeader">
+            <h2>Recent Customers</h2>
+          </div>
+          <table>
+            <tr>
+              <td>
+                <div class="imgBx">
+                  <img src="Sohee ✨.jpg" alt="Customer Image">
+                </div>
+              </td>
+              <td>
+                <div class="customer-details">
+                  <h4>Hansohe <br><span>Korsel</span></h4>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="imgBx">
+                  <img src="Sohee ✨.jpg" alt="Customer Image">
+                </div>
+              </td>
+              <td>
+                <div class="customer-details">
+                  <h4>Hansohe <br><span>Korsel</span></h4>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="imgBx">
+                  <img src="Sohee ✨.jpg" alt="Customer Image">
+                </div>
+              </td>
+              <td>
+                <div class="customer-details">
+                  <h4>Hansohe <br><span>Korsel</span></h4>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="imgBx">
+                  <img src="Sohee ✨.jpg" alt="Customer Image">
+                </div>
+              </td>
+              <td>
+                <div class="customer-details">
+                  <h4>Hansohe <br><span>Korsel</span></h4>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="imgBx">
+                  <img src="Sohee ✨.jpg" alt="Customer Image">
+                </div>
+              </td>
+              <td>
+                <div class="customer-details">
+                  <h4>Hansohe <br><span>Korsel</span></h4>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
